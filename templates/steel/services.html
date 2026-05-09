@@ -1,0 +1,58 @@
+{% extends "steel/partials/base.html" %}
+{% load static %}
+
+{% block title %}Services - Nirman Global Steel & Aluminium{% endblock %}
+{% block og_title %}Our Services - Steel & Aluminium Fabrication{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="container">
+        <h1>Our Services</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'steel_home' %}">Home</a></li>
+                <li class="breadcrumb-item active">Services</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Services Grid -->
+<section class="section-pad bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-tag">What We Offer</span>
+            <h2 class="section-title">Comprehensive Fabrication Services</h2>
+            <p class="text-muted">From aluminium windows to custom steel structures — we do it all</p>
+        </div>
+        <div class="row">
+            {% for service in services %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="steel-service-card">
+                    <div class="service-icon-wrap">
+                        <i class="{{ service.icon }}"></i>
+                    </div>
+                    <h5>{{ service.title }}</h5>
+                    <p class="text-muted">{{ service.description|truncatewords:25 }}</p>
+                    <a href="{% url 'steel_service_detail' service.id %}" class="service-link">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center text-muted py-5">No services available yet.</div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container text-center">
+        <h2 class="text-white mb-3">Need a Custom Solution?</h2>
+        <p class="text-white-50 mb-4">Tell us your requirements and we'll get back to you with a free quote.</p>
+        <a href="{% url 'steel_quote' %}" class="btn btn-steel-primary btn-lg">Request a Quote</a>
+    </div>
+</section>
+
+{% endblock %}

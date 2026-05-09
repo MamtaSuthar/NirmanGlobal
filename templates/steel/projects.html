@@ -1,0 +1,80 @@
+{% extends "steel/partials/base.html" %}
+{% load static %}
+
+{% block title %}Projects - Nirman Global Steel & Aluminium{% endblock %}
+{% block og_title %}Our Projects - Steel & Aluminium Fabrication{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="container">
+        <h1>Our Projects</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'steel_home' %}">Home</a></li>
+                <li class="breadcrumb-item active">Projects</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<section class="section-pad bg-white">
+    <div class="container">
+
+        <!-- Category Filter -->
+        <div class="filter-bar mb-5 text-center">
+            <button class="filter-btn active" data-filter="*">All</button>
+            {% for cat in categories %}
+            <button class="filter-btn" data-filter=".cat-{{ cat.slug }}">{{ cat.name }}</button>
+            {% endfor %}
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="row project-grid">
+            {% for project in projects %}
+            <div class="col-lg-4 col-md-6 mb-4 project-item cat-{{ project.category.slug }}">
+                <div class="steel-project-card">
+                    <div class="project-img-wrap">
+                        <img src="{{ project.cover_image.url }}" alt="{{ project.title }}" class="img-fluid">
+                        <div class="project-overlay">
+                            <a href="{% url 'steel_project_detail' project.slug %}" class="project-view-btn">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                        </div>
+                        <span class="project-status status-{{ project.status }}">{{ project.get_status_display }}</span>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">{{ project.category.name }}</span>
+                        <h5>{{ project.title }}</h5>
+                        {% if project.location %}<p class="text-muted small"><i class="fa fa-map-marker-alt mr-1"></i>{{ project.location }}</p>{% endif %}
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center text-muted py-5">No projects available yet.</div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+$(document).ready(function () {
+    $('.filter-btn').on('click', function () {
+        $('.filter-btn').removeClass('active');
+        $(this).addClass('active');
+        var filter = $(this).data('filter');
+        if (filter === '*') {
+            $('.project-item').show();
+        } else {
+            $('.project-item').hide();
+            $(filter).show();
+        }
+    });
+});
+</script>
+{% endblock %}

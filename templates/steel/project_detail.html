@@ -1,0 +1,64 @@
+{% extends "steel/partials/base.html" %}
+{% load static %}
+
+{% block title %}{{ project.title }} - Nirman Global{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="container">
+        <h1>{{ project.title }}</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'steel_home' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'steel_projects' %}">Projects</a></li>
+                <li class="breadcrumb-item active">{{ project.title }}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<section class="section-pad bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <img src="{{ project.cover_image.url }}" alt="{{ project.title }}" class="img-fluid rounded mb-4 w-100">
+                <h2 class="mb-3">{{ project.title }}</h2>
+                <p class="text-muted">{{ project.description }}</p>
+
+                {% if project.images.all %}
+                <h5 class="mt-5 mb-3">Project Gallery</h5>
+                <div class="row">
+                    {% for img in project.images.all %}
+                    <div class="col-md-4 mb-3">
+                        <a href="{{ img.image.url }}" data-lightbox="project-gallery">
+                            <img src="{{ img.image.url }}" alt="{{ project.title }}" class="img-fluid rounded steel-gallery-img">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="col-lg-4">
+                <div class="sidebar-card">
+                    <h5 class="mb-3">Project Details</h5>
+                    <ul class="list-unstyled project-detail-list">
+                        <li><strong>Category:</strong> {{ project.category.name }}</li>
+                        <li><strong>Status:</strong> <span class="badge-status status-{{ project.status }}">{{ project.get_status_display }}</span></li>
+                        {% if project.location %}<li><strong>Location:</strong> {{ project.location }}</li>{% endif %}
+                        {% if project.budget_range %}<li><strong>Budget Range:</strong> {{ project.budget_range }}</li>{% endif %}
+                    </ul>
+                </div>
+                <div class="sidebar-card mt-4 text-center">
+                    <h5 class="mb-3">Similar Project in Mind?</h5>
+                    <p class="text-muted small">Get a free quote from our expert team.</p>
+                    <a href="{% url 'steel_quote' %}" class="btn btn-steel-primary w-100">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

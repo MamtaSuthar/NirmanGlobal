@@ -1,0 +1,68 @@
+{% extends "steel/partials/base.html" %}
+{% load static %}
+
+{% block title %}{{ service.title }} - Nirman Global{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="container">
+        <h1>{{ service.title }}</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'steel_home' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'steel_services' %}">Services</a></li>
+                <li class="breadcrumb-item active">{{ service.title }}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<section class="section-pad bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="service-icon-wrap mb-4">
+                    <i class="{{ service.icon }}"></i>
+                </div>
+                <h2 class="mb-3">{{ service.title }}</h2>
+                <p class="text-muted">{{ service.description }}</p>
+
+                {% if service.images.all %}
+                <h5 class="mt-5 mb-3">Gallery</h5>
+                <div class="row">
+                    {% for img in service.images.all %}
+                    <div class="col-md-4 mb-3">
+                        <a href="{{ img.image.url }}" data-lightbox="service-gallery">
+                            <img src="{{ img.image.url }}" alt="{{ service.title }}" class="img-fluid rounded steel-gallery-img">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-card">
+                    <h5 class="mb-3">All Services</h5>
+                    <ul class="list-unstyled sidebar-service-list">
+                        {% for s in all_services %}
+                        <li class="{% if s.id == service.id %}active{% endif %}">
+                            <a href="{% url 'steel_service_detail' s.id %}">
+                                <i class="fa fa-chevron-right mr-2"></i>{{ s.title }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="sidebar-card mt-4 text-center">
+                    <h5 class="mb-3">Need This Service?</h5>
+                    <p class="text-muted small">Get a free quote from our team today.</p>
+                    <a href="{% url 'steel_quote' %}" class="btn btn-steel-primary w-100">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

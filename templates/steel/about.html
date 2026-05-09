@@ -1,0 +1,120 @@
+{% extends "steel/partials/base.html" %}
+{% load static %}
+
+{% block title %}About Us - Nirman Global Steel & Aluminium{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="container">
+        <h1>About Us</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'steel_home' %}">Home</a></li>
+                <li class="breadcrumb-item active">About</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- About Content -->
+<section class="section-pad bg-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="about-img-wrap large">
+                    <img src="{% static 'img/manufacturing-banner-004.webp' %}" alt="About Us" class="about-real-img">
+                </div>
+            </div>
+            <div class="col-lg-6 pl-lg-5">
+                <span class="section-tag">Our Story</span>
+                <h2 class="section-title">25+ Years of Steel &amp; Aluminium Excellence</h2>
+                <p class="text-muted mb-3">Founded over two decades ago, Nirman Global has grown into one of the most trusted names in steel and aluminium fabrication. We serve residential, commercial, and industrial clients with precision-engineered solutions.</p>
+                <p class="text-muted mb-4">Our team of skilled fabricators and installers brings together traditional craftsmanship and modern technology to deliver products that are built to last.</p>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="about-stat">
+                            <h3 class="stat-num">25+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="about-stat">
+                            <h3 class="stat-num">500+</h3>
+                            <p>Projects Done</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission & Values -->
+<section class="section-pad bg-steel-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-tag">What Drives Us</span>
+            <h2 class="section-title">Our Mission &amp; Values</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="value-card text-center">
+                    <i class="fa fa-bullseye value-icon"></i>
+                    <h5>Our Mission</h5>
+                    <p class="text-muted">To deliver precision-engineered steel and aluminium solutions that exceed client expectations in quality, durability, and design.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="value-card text-center">
+                    <i class="fa fa-eye value-icon"></i>
+                    <h5>Our Vision</h5>
+                    <p class="text-muted">To be the most trusted fabrication partner for residential and commercial projects across the region.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="value-card text-center">
+                    <i class="fa fa-handshake value-icon"></i>
+                    <h5>Our Values</h5>
+                    <p class="text-muted">Integrity, quality, innovation, and customer satisfaction are the pillars of everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team -->
+{% if team_members %}
+<section class="section-pad bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-tag">The People</span>
+            <h2 class="section-title">Meet Our Team</h2>
+            <p class="text-muted">Skilled professionals dedicated to delivering the best</p>
+        </div>
+        <div class="row">
+            {% for member in team_members %}
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="team-card text-center">
+                    <div class="team-img-wrap">
+                        <img src="{{ member.image.url }}" alt="{{ member.name }}" class="img-fluid">
+                    </div>
+                    <div class="team-info">
+                        <h6>{{ member.name }}</h6>
+                        <small class="text-muted">{{ member.designation }}</small>
+                        <div class="team-social mt-2">
+                            {% if member.twitter %}<a href="{{ member.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>{% endif %}
+                            {% if member.facebook %}<a href="{{ member.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>{% endif %}
+                            {% if member.linkedin %}<a href="{{ member.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>{% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{% endblock %}

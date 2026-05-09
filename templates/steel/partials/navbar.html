@@ -1,0 +1,19 @@
+{% load static %}
+<nav class="steel-navbar navbar navbar-expand-lg p-0">
+    <a href="{% url 'steel_home' %}" class="navbar-brand d-flex align-items-center px-3">
+        <img src="{% static 'img/logo.png' %}" class="img-fluid" style="max-height:80px;" alt="Logo">
+    </a>
+    <button type="button" class="navbar-toggler mr-3" data-toggle="collapse" data-target="#steelNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between px-3" id="steelNav">
+        <div class="navbar-nav ml-auto py-0">
+            <a href="{% url 'steel_home' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_home' %}active{% endif %}">Home</a>
+            <a href="{% url 'steel_about' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_about' %}active{% endif %}">About</a>
+            <a href="{% url 'steel_services' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_services' %}active{% endif %}">Services</a>
+            <a href="{% url 'steel_projects' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_projects' %}active{% endif %}">Projects</a>
+            <a href="{% url 'steel_contact' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_contact' %}active{% endif %}">Contact</a>
+            <a href="{% url 'steel_quote' %}" class="nav-item nav-link btn-quote ml-2">Request a Quote</a>
+        </div>
+    </div>
+</nav>

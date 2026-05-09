@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body style="margin:0; padding:0; background:#f4f4f4; font-family: Arial, sans-serif;">
+
+    <table width="100%" cellspacing="0" cellpadding="0" style="background:#f4f4f4; padding:20px 0;">
+        <tr>
+            <td align="center">
+
+                <!-- Card -->
+                <table width="600" cellspacing="0" cellpadding="0" style="background:#ffffff; border-radius:10px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+
+                    <!-- Header with Logo -->
+                    <tr>
+                        <td align="center" style="background:#1f1f2e; padding:20px;">
+                            <img src="https://yourdomain.com/static/img/logo3.png" alt="logo" style="height:60px;">
+                        </td>
+                    </tr>
+
+                    <!-- Title -->
+                    <tr>
+                        <td style="padding:25px;">
+                            <h2 style="margin:0; color:#b78d65;">
+                                {{ project_name }}
+                            </h2>
+
+                            <p style="margin-top:10px; color:#333;">
+                                Hi <b>{{ name }}</b>,
+                            </p>
+
+                            <p style="color:#555;">
+                                ✨ Your design journey starts here!
+                            </p>
+
+                            <p style="color:#555;">
+                                We’ve received your request for a 
+                                <b style="color:#000;">{{ service }}</b> session.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Booking Details Box -->
+                    <tr>
+                        <td style="padding:0 25px;">
+                            <table width="100%" style="background:#fafafa; border-radius:8px; padding:15px;">
+                                <tr>
+                                    <td style="color:#333;">
+                                        📅 <b>Date:</b> {{ date }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="color:#333; padding-top:5px;">
+                                        ⏰ <b>Time:</b> {{ time }}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Message -->
+                    <tr>
+                        <td style="padding:25px;">
+                            <p style="color:#555;">
+                                Our design expert will contact you shortly to confirm your session and guide you further.
+                            </p>
+
+                            <p style="color:#555;">
+                                If urgent, feel free to reach us on WhatsApp 📱
+                            </p>
+
+                            <br>
+
+                            <p style="color:#333;">
+                                Best regards,<br>
+                                <b>{{ project_name }}</b>
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background:#1f1f2e; padding:15px; text-align:center; color:#aaa; font-size:12px;">
+                            © {{ project_name }} | All Rights Reserved
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

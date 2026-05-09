@@ -1,5 +1,6 @@
 {% extends "steel/partials/base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}Request a Quote - Nirman Global Steel & Aluminium{% endblock %}
 
@@ -8,11 +9,11 @@
 <!-- Page Header -->
 <div class="page-header">
     <div class="container">
-        <h1>Request a Quote</h1>
+        <h1>{% trans "Request a Quote" %}</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{% url 'steel_home' %}">Home</a></li>
-                <li class="breadcrumb-item active">Request a Quote</li>
+                <li class="breadcrumb-item"><a href="{% url 'steel_home' %}">{% trans "Home" %}</a></li>
+                <li class="breadcrumb-item active">{% trans "Request a Quote" %}</li>
             </ol>
         </nav>
     </div>
@@ -25,9 +26,9 @@
                 <div class="steel-form-card">
 
                     <div class="text-center mb-4">
-                        <span class="section-tag">Free Estimate</span>
-                        <h3 class="section-title">Tell Us About Your Project</h3>
-                        <p class="text-muted">Fill in the details below and our team will get back to you within 24 hours.</p>
+                        <span class="section-tag">{% trans "Free Estimate" %}</span>
+                        <h3 class="section-title">{% trans "Tell Us About Your Project" %}</h3>
+                        <p class="text-muted">{% trans "Fill in the details below and our team will get back to you within 24 hours." %}</p>
                     </div>
 
                     {% if messages %}
@@ -44,15 +45,15 @@
 
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label class="steel-label">Full Name <span class="text-danger">*</span></label>
+                                <label class="steel-label">{% trans "Full Name" %} <span class="text-danger">*</span></label>
                                 <input type="text" name="client_name"
                                     class="form-control steel-input {% if errors.client_name %}is-invalid{% endif %}"
-                                    placeholder="Your full name"
+                                    placeholder="{% trans 'Your full name' %}"
                                     value="{{ form_data.client_name|default:'' }}" required>
                                 {% if errors.client_name %}<div class="invalid-feedback">{{ errors.client_name }}</div>{% endif %}
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label class="steel-label">Phone Number <span class="text-danger">*</span></label>
+                                <label class="steel-label">{% trans "Phone Number" %} <span class="text-danger">*</span></label>
                                 <input type="tel" name="phone"
                                     class="form-control steel-input {% if errors.phone %}is-invalid{% endif %}"
                                     placeholder="+91 98765 43210"
@@ -62,7 +63,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="steel-label">Email Address <span class="text-danger">*</span></label>
+                            <label class="steel-label">{% trans "Email Address" %} <span class="text-danger">*</span></label>
                             <input type="email" name="email"
                                 class="form-control steel-input {% if errors.email %}is-invalid{% endif %}"
                                 placeholder="your@email.com"
@@ -71,16 +72,16 @@
                         </div>
 
                         <div class="mb-4">
-                            <label class="steel-label">Project Description <span class="text-danger">*</span></label>
+                            <label class="steel-label">{% trans "Project Description" %} <span class="text-danger">*</span></label>
                             <textarea name="description" rows="6"
                                 class="form-control steel-input {% if errors.description %}is-invalid{% endif %}"
-                                placeholder="Describe your requirements — dimensions, material type, quantity, location, timeline..."
+                                placeholder="{% trans 'Describe your requirements — dimensions, material type, quantity, location, timeline...' %}"
                                 required>{{ form_data.description|default:'' }}</textarea>
                             {% if errors.description %}<div class="invalid-feedback">{{ errors.description }}</div>{% endif %}
                         </div>
 
                         <button type="submit" class="btn btn-steel-primary w-100 py-3">
-                            <i class="fa fa-paper-plane mr-2"></i> Submit Quote Request
+                            <i class="fa fa-paper-plane mr-2"></i> {% trans "Submit Quote Request" %}
                         </button>
                     </form>
 
@@ -90,18 +91,18 @@
             <!-- Side info -->
             <div class="col-lg-4 mt-4 mt-lg-0">
                 <div class="sidebar-card mb-4">
-                    <h6 class="mb-3" style="font-family:'Oswald',sans-serif;">What Happens Next?</h6>
+                    <h6 class="mb-3" style="font-family:'Oswald',sans-serif;">{% trans "What Happens Next?" %}</h6>
                     <ul class="list-unstyled" style="font-size:14px;">
-                        <li class="mb-3"><i class="fa fa-check-circle text-success mr-2"></i> We review your requirements</li>
-                        <li class="mb-3"><i class="fa fa-check-circle text-success mr-2"></i> Our team prepares a detailed quote</li>
-                        <li class="mb-3"><i class="fa fa-check-circle text-success mr-2"></i> We contact you within 24 hours</li>
-                        <li class="mb-3"><i class="fa fa-check-circle text-success mr-2"></i> Free site visit if needed</li>
+                        <li class="mb-3"><i class="fa fa-check-circle text-success mr-2"></i> {% trans "We review your requirements" %}</li>
+                        <li class="mb-3"><i class="fa fa-check-circle text-success mr-2"></i> {% trans "Our team prepares a detailed quote" %}</li>
+                        <li class="mb-3"><i class="fa fa-check-circle text-success mr-2"></i> {% trans "We contact you within 24 hours" %}</li>
+                        <li class="mb-3"><i class="fa fa-check-circle text-success mr-2"></i> {% trans "Free site visit if needed" %}</li>
                     </ul>
                 </div>
                 <div class="sidebar-card text-center">
                     <i class="fa fa-phone-alt" style="font-size:2rem;color:var(--steel-primary);"></i>
-                    <h6 class="mt-3 mb-1" style="font-family:'Oswald',sans-serif;">Prefer to Call?</h6>
-                    <p class="text-muted small mb-2">Mon–Sat, 9am–6pm</p>
+                    <h6 class="mt-3 mb-1" style="font-family:'Oswald',sans-serif;">{% trans "Prefer to Call?" %}</h6>
+                    <p class="text-muted small mb-2">{% trans "Mon–Sat, 9am–6pm" %}</p>
                     {% if site_settings %}
                     <a href="tel:{{ site_settings.phone }}" class="btn btn-steel-primary btn-sm">{{ site_settings.phone }}</a>
                     {% else %}

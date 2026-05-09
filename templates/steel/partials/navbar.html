@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <nav class="steel-navbar navbar navbar-expand-lg p-0">
     <a href="{% url 'steel_home' %}" class="navbar-brand d-flex align-items-center px-3">
         <img src="{% static 'img/logo.png' %}" class="img-fluid" style="max-height:80px;" alt="Logo">
@@ -8,12 +9,25 @@
     </button>
     <div class="collapse navbar-collapse justify-content-between px-3" id="steelNav">
         <div class="navbar-nav ml-auto py-0">
-            <a href="{% url 'steel_home' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_home' %}active{% endif %}">Home</a>
-            <a href="{% url 'steel_about' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_about' %}active{% endif %}">About</a>
-            <a href="{% url 'steel_services' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_services' %}active{% endif %}">Services</a>
-            <a href="{% url 'steel_projects' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_projects' %}active{% endif %}">Projects</a>
-            <a href="{% url 'steel_contact' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_contact' %}active{% endif %}">Contact</a>
-            <a href="{% url 'steel_quote' %}" class="nav-item nav-link btn-quote ml-2">Request a Quote</a>
+            <a href="{% url 'steel_home' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_home' %}active{% endif %}">{% trans "Home" %}</a>
+            <a href="{% url 'steel_about' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_about' %}active{% endif %}">{% trans "About" %}</a>
+            <a href="{% url 'steel_services' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_services' %}active{% endif %}">{% trans "Services" %}</a>
+            <a href="{% url 'steel_projects' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_projects' %}active{% endif %}">{% trans "Projects" %}</a>
+            <a href="{% url 'steel_contact' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'steel_contact' %}active{% endif %}">{% trans "Contact" %}</a>
+            <a href="{% url 'steel_quote' %}" class="nav-item nav-link btn-quote ml-2">{% trans "Request a Quote" %}</a>
+
+            <!-- Language Switcher -->
+            {% get_current_language as CURRENT_LANG %}
+            <form action="{% url 'set_language' %}" method="post" class="d-flex align-items-center ml-3">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                <select name="language" onchange="this.form.submit()"
+                        class="form-control form-control-sm"
+                        style="width:auto; background:#1a1a2e; color:#fff; border:1px solid #444; border-radius:4px; cursor:pointer;">
+                    <option value="en" {% if CURRENT_LANG == 'en' %}selected{% endif %}>🇬🇧 EN</option>
+                    <option value="hi" {% if CURRENT_LANG == 'hi' %}selected{% endif %}>🇮🇳 HI</option>
+                </select>
+            </form>
         </div>
     </div>
 </nav>

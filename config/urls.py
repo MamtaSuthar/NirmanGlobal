@@ -14,6 +14,7 @@ from apps.book_desgin.views import book_design
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n')),
 
     # Steel & Aluminium site at root
     path('', include('apps.home.steel_urls')),

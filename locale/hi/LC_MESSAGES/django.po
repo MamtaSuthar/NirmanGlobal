@@ -1,0 +1,346 @@
+# Hindi translations for Nirman Global
+# Copyright (C) 2024
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Navbar
+msgid "Home"
+msgstr "होम"
+
+msgid "About"
+msgstr "हमारे बारे में"
+
+msgid "Services"
+msgstr "सेवाएं"
+
+msgid "Projects"
+msgstr "परियोजनाएं"
+
+msgid "Contact"
+msgstr "संपर्क करें"
+
+msgid "Request a Quote"
+msgstr "कोटेशन मांगें"
+
+# Hero Section
+msgid "Premium Steel & Aluminium Solutions"
+msgstr "प्रीमियम स्टील और एल्युमीनियम समाधान"
+
+msgid "Strength. Precision. Modern Fabrication."
+msgstr "मजबूती। सटीकता। आधुनिक निर्माण।"
+
+msgid "High-quality aluminium windows, sliding systems, glass work, and custom steel fabrication."
+msgstr "उच्च गुणवत्ता वाली एल्युमीनियम खिड़कियां, स्लाइडिंग सिस्टम, कांच का काम और कस्टम स्टील फैब्रिकेशन।"
+
+msgid "Expert Fabrication Team"
+msgstr "विशेषज्ञ निर्माण टीम"
+
+msgid "Built to Last. Crafted with Care."
+msgstr "टिकाऊ निर्माण। देखभाल के साथ बनाया।"
+
+msgid "Quality Aluminium Products"
+msgstr "गुणवत्तापूर्ण एल्युमीनियम उत्पाद"
+
+msgid "Precision Cut. Perfectly Finished."
+msgstr "सटीक कटाई। परफेक्ट फिनिश।"
+
+# Stats
+msgid "Years Experience"
+msgstr "वर्षों का अनुभव"
+
+msgid "Projects Completed"
+msgstr "परियोजनाएं पूर्ण"
+
+msgid "Happy Clients"
+msgstr "संतुष्ट ग्राहक"
+
+msgid "Expert Team"
+msgstr "विशेषज्ञ टीम"
+
+# About Section
+msgid "About Us"
+msgstr "हमारे बारे में"
+
+msgid "Leading Steel & Aluminium Fabrication Experts"
+msgstr "अग्रणी स्टील और एल्युमीनियम फैब्रिकेशन विशेषज्ञ"
+
+msgid "Follow us on Instagram"
+msgstr "इंस्टाग्राम पर फॉलो करें"
+
+msgid "Scan to follow us on Instagram"
+msgstr "इंस्टाग्राम पर फॉलो करने के लिए स्कैन करें"
+
+msgid "Learn More"
+msgstr "और जानें"
+
+# Services
+msgid "What We Do"
+msgstr "हम क्या करते हैं"
+
+msgid "Our Services"
+msgstr "हमारी सेवाएं"
+
+msgid "Comprehensive steel and aluminium solutions for every need"
+msgstr "हर जरूरत के लिए व्यापक स्टील और एल्युमीनियम समाधान"
+
+msgid "All Services"
+msgstr "सभी सेवाएं"
+
+# Projects
+msgid "Our Work"
+msgstr "हमारा काम"
+
+msgid "Featured Projects"
+msgstr "विशेष परियोजनाएं"
+
+msgid "A glimpse of our craftsmanship across residential and commercial spaces"
+msgstr "आवासीय और व्यावसायिक स्थानों में हमारी कारीगरी की एक झलक"
+
+msgid "View All Projects"
+msgstr "सभी परियोजनाएं देखें"
+
+# Why Choose Us
+msgid "Why Choose Us"
+msgstr "हमें क्यों चुनें"
+
+msgid "Built on Trust, Delivered with Precision"
+msgstr "विश्वास पर निर्मित, सटीकता के साथ वितरित"
+
+# Testimonials
+msgid "Client Reviews"
+msgstr "ग्राहक समीक्षाएं"
+
+msgid "What Our Clients Say"
+msgstr "हमारे ग्राहक क्या कहते हैं"
+
+# CTA
+msgid "Ready to Start Your Project?"
+msgstr "अपना प्रोजेक्ट शुरू करने के लिए तैयार हैं?"
+
+msgid "Get a free quote from our expert team today."
+msgstr "आज हमारी विशेषज्ञ टीम से मुफ्त कोटेशन प्राप्त करें।"
+
+msgid "Contact Us"
+msgstr "हमसे संपर्क करें"
+
+# Contact page
+msgid "Reach Out"
+msgstr "संपर्क करें"
+
+msgid "We'd Love to Hear From You"
+msgstr "हम आपसे सुनना चाहते हैं"
+
+msgid "Have a project in mind? Send us a message and our team will get back to you within 24 hours."
+msgstr "कोई प्रोजेक्ट है? हमें संदेश भेजें, हमारी टीम 24 घंटे में जवाब देगी।"
+
+msgid "Get In Touch"
+msgstr "संपर्क करें"
+
+msgid "Our team is available Mon–Sat, 9am to 6pm."
+msgstr "हमारी टीम सोम–शनि, सुबह 9 से शाम 6 बजे उपलब्ध है।"
+
+msgid "Address"
+msgstr "पता"
+
+msgid "Phone"
+msgstr "फ़ोन"
+
+msgid "Email"
+msgstr "ईमेल"
+
+msgid "Working Hours"
+msgstr "कार्य समय"
+
+msgid "Mon – Sat: 9:00 AM – 6:00 PM"
+msgstr "सोम – शनि: सुबह 9:00 – शाम 6:00"
+
+msgid "Follow Us"
+msgstr "हमें फॉलो करें"
+
+msgid "Send a Message"
+msgstr "संदेश भेजें"
+
+msgid "Fill in the form below and we'll respond as soon as possible."
+msgstr "नीचे फॉर्म भरें, हम जल्द से जल्द जवाब देंगे।"
+
+msgid "Full Name"
+msgstr "पूरा नाम"
+
+msgid "e.g. Rajesh Patel"
+msgstr "जैसे: राजेश पटेल"
+
+msgid "Email Address"
+msgstr "ईमेल पता"
+
+msgid "e.g. rajesh@email.com"
+msgstr "जैसे: rajesh@email.com"
+
+msgid "Subject"
+msgstr "विषय"
+
+msgid "e.g. Aluminium window quote"
+msgstr "जैसे: एल्युमीनियम खिड़की कोटेशन"
+
+msgid "Category"
+msgstr "श्रेणी"
+
+msgid "General Inquiry"
+msgstr "सामान्य पूछताछ"
+
+msgid "Pricing"
+msgstr "मूल्य निर्धारण"
+
+msgid "Custom Fabrication"
+msgstr "कस्टम फैब्रिकेशन"
+
+msgid "Complaint"
+msgstr "शिकायत"
+
+msgid "Message"
+msgstr "संदेश"
+
+msgid "Describe your project or inquiry..."
+msgstr "अपना प्रोजेक्ट या पूछताछ बताएं..."
+
+msgid "Send Message"
+msgstr "संदेश भेजें"
+
+msgid "Free Site Visit"
+msgstr "मुफ्त साइट विजिट"
+
+msgid "We offer free site visits for large projects in Gujarat."
+msgstr "हम गुजरात में बड़े प्रोजेक्ट के लिए मुफ्त साइट विजिट देते हैं।"
+
+msgid "Free Quotation"
+msgstr "मुफ्त कोटेशन"
+
+msgid "Get a detailed quote within 24 hours of your inquiry."
+msgstr "पूछताछ के 24 घंटे के भीतर विस्तृत कोटेशन पाएं।"
+
+msgid "Dedicated Support"
+msgstr "समर्पित सहायता"
+
+msgid "A dedicated project manager assigned to every client."
+msgstr "हर ग्राहक को एक समर्पित प्रोजेक्ट मैनेजर दिया जाता है।"
+
+# Services page
+msgid "What We Offer"
+msgstr "हम क्या प्रदान करते हैं"
+
+msgid "Comprehensive Fabrication Services"
+msgstr "व्यापक फैब्रिकेशन सेवाएं"
+
+msgid "From aluminium windows to custom steel structures — we do it all"
+msgstr "एल्युमीनियम खिड़कियों से लेकर कस्टम स्टील संरचनाओं तक — हम सब करते हैं"
+
+msgid "View Details"
+msgstr "विवरण देखें"
+
+msgid "Need a Custom Solution?"
+msgstr "कस्टम समाधान चाहिए?"
+
+msgid "Tell us your requirements and we'll get back to you with a free quote."
+msgstr "अपनी जरूरतें बताएं, हम मुफ्त कोटेशन के साथ वापस आएंगे।"
+
+# Projects page
+msgid "All"
+msgstr "सभी"
+
+# About page
+msgid "Our Story"
+msgstr "हमारी कहानी"
+
+msgid "25+ Years of Steel & Aluminium Excellence"
+msgstr "स्टील और एल्युमीनियम में 25+ वर्षों की उत्कृष्टता"
+
+msgid "Founded over two decades ago, Nirman Global has grown into one of the most trusted names in steel and aluminium fabrication. We serve residential, commercial, and industrial clients with precision-engineered solutions."
+msgstr "दो दशक से अधिक पहले स्थापित, निर्माण ग्लोबल स्टील और एल्युमीनियम फैब्रिकेशन में सबसे विश्वसनीय नामों में से एक बन गया है।"
+
+msgid "Our team of skilled fabricators and installers brings together traditional craftsmanship and modern technology to deliver products that are built to last."
+msgstr "हमारी कुशल टीम पारंपरिक कारीगरी और आधुनिक तकनीक को मिलाकर टिकाऊ उत्पाद बनाती है।"
+
+msgid "Projects Done"
+msgstr "परियोजनाएं पूर्ण"
+
+msgid "What Drives Us"
+msgstr "हमारी प्रेरणा"
+
+msgid "Our Mission & Values"
+msgstr "हमारा मिशन और मूल्य"
+
+msgid "Our Mission"
+msgstr "हमारा मिशन"
+
+msgid "To deliver precision-engineered steel and aluminium solutions that exceed client expectations in quality, durability, and design."
+msgstr "गुणवत्ता, टिकाऊपन और डिज़ाइन में ग्राहकों की अपेक्षाओं से बेहतर स्टील और एल्युमीनियम समाधान प्रदान करना।"
+
+msgid "Our Vision"
+msgstr "हमारी दृष्टि"
+
+msgid "To be the most trusted fabrication partner for residential and commercial projects across the region."
+msgstr "क्षेत्र भर में आवासीय और व्यावसायिक परियोजनाओं के लिए सबसे विश्वसनीय फैब्रिकेशन पार्टनर बनना।"
+
+msgid "Our Values"
+msgstr "हमारे मूल्य"
+
+msgid "Integrity, quality, innovation, and customer satisfaction are the pillars of everything we do."
+msgstr "ईमानदारी, गुणवत्ता, नवाचार और ग्राहक संतुष्टि हमारे हर काम की नींव है।"
+
+msgid "The People"
+msgstr "हमारे लोग"
+
+msgid "Meet Our Team"
+msgstr "हमारी टीम से मिलें"
+
+msgid "Skilled professionals dedicated to delivering the best"
+msgstr "सर्वश्रेष्ठ देने के लिए समर्पित कुशल पेशेवर"
+
+# Quote page
+msgid "Free Estimate"
+msgstr "मुफ्त अनुमान"
+
+msgid "Tell Us About Your Project"
+msgstr "अपने प्रोजेक्ट के बारे में बताएं"
+
+msgid "Fill in the details below and our team will get back to you within 24 hours."
+msgstr "नीचे विवरण भरें, हमारी टीम 24 घंटे में संपर्क करेगी।"
+
+msgid "Phone Number"
+msgstr "फ़ोन नंबर"
+
+msgid "Project Description"
+msgstr "प्रोजेक्ट विवरण"
+
+msgid "Describe your requirements — dimensions, material type, quantity, location, timeline..."
+msgstr "अपनी जरूरतें बताएं — आयाम, सामग्री प्रकार, मात्रा, स्थान, समयसीमा..."
+
+msgid "Submit Quote Request"
+msgstr "कोटेशन अनुरोध जमा करें"
+
+msgid "What Happens Next?"
+msgstr "आगे क्या होगा?"
+
+msgid "We review your requirements"
+msgstr "हम आपकी जरूरतें समीक्षा करते हैं"
+
+msgid "Our team prepares a detailed quote"
+msgstr "हमारी टीम विस्तृत कोटेशन तैयार करती है"
+
+msgid "We contact you within 24 hours"
+msgstr "हम 24 घंटे में आपसे संपर्क करते हैं"
+
+msgid "Free site visit if needed"
+msgstr "जरूरत पड़ने पर मुफ्त साइट विजिट"
+
+msgid "Prefer to Call?"
+msgstr "कॉल करना पसंद करते हैं?"
+
+msgid "Mon–Sat, 9am–6pm"
+msgstr "सोम–शनि, सुबह 9–शाम 6"
+
+msgid "Your full name"
+msgstr "आपका पूरा नाम"

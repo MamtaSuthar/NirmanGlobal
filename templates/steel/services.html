@@ -1,19 +1,20 @@
 {% extends "steel/partials/base.html" %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}Services - Nirman Global Steel & Aluminium{% endblock %}
-{% block og_title %}Our Services - Steel & Aluminium Fabrication{% endblock %}
+{% block title %}{% trans "Services" %} - Nirman Global Steel & Aluminium{% endblock %}
+{% block og_title %}{% trans "Our Services" %} - Steel & Aluminium Fabrication{% endblock %}
 
 {% block content %}
 
 <!-- Page Header -->
 <div class="page-header">
     <div class="container">
-        <h1>Our Services</h1>
+        <h1>{% trans "Our Services" %}</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{% url 'steel_home' %}">Home</a></li>
-                <li class="breadcrumb-item active">Services</li>
+                <li class="breadcrumb-item"><a href="{% url 'steel_home' %}">{% trans "Home" %}</a></li>
+                <li class="breadcrumb-item active">{% trans "Services" %}</li>
             </ol>
         </nav>
     </div>
@@ -23,9 +24,9 @@
 <section class="section-pad bg-white">
     <div class="container">
         <div class="text-center mb-5">
-            <span class="section-tag">What We Offer</span>
-            <h2 class="section-title">Comprehensive Fabrication Services</h2>
-            <p class="text-muted">From aluminium windows to custom steel structures — we do it all</p>
+            <span class="section-tag">{% trans "What We Offer" %}</span>
+            <h2 class="section-title">{% trans "Comprehensive Fabrication Services" %}</h2>
+            <p class="text-muted">{% trans "From aluminium windows to custom steel structures — we do it all" %}</p>
         </div>
         <div class="row">
             {% for service in services %}
@@ -36,7 +37,7 @@
                     </div>
                     <h5>{{ service.title }}</h5>
                     <p class="text-muted">{{ service.description|truncatewords:25 }}</p>
-                    <a href="{% url 'steel_service_detail' service.id %}" class="service-link">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+                    <a href="{% url 'steel_service_detail' service.id %}" class="service-link">{% trans "View Details" %} <i class="fa fa-arrow-right ml-1"></i></a>
                 </div>
             </div>
             {% empty %}
@@ -49,9 +50,9 @@
 <!-- CTA -->
 <section class="cta-section">
     <div class="container text-center">
-        <h2 class="text-white mb-3">Need a Custom Solution?</h2>
-        <p class="text-white-50 mb-4">Tell us your requirements and we'll get back to you with a free quote.</p>
-        <a href="{% url 'steel_quote' %}" class="btn btn-steel-primary btn-lg">Request a Quote</a>
+        <h2 class="text-white mb-3">{% trans "Need a Custom Solution?" %}</h2>
+        <p class="text-white-50 mb-4">{% trans "Tell us your requirements and we'll get back to you with a free quote." %}</p>
+        <a href="{% url 'steel_quote' %}" class="btn btn-steel-primary btn-lg">{% trans "Request a Quote" %}</a>
     </div>
 </section>
 

@@ -1,5 +1,6 @@
 {% extends "steel/partials/base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}About Us - Nirman Global Steel & Aluminium{% endblock %}
 
@@ -8,11 +9,11 @@
 <!-- Page Header -->
 <div class="page-header">
     <div class="container">
-        <h1>About Us</h1>
+        <h1>{% trans "About Us" %}</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{% url 'steel_home' %}">Home</a></li>
-                <li class="breadcrumb-item active">About</li>
+                <li class="breadcrumb-item"><a href="{% url 'steel_home' %}">{% trans "Home" %}</a></li>
+                <li class="breadcrumb-item active">{% trans "About" %}</li>
             </ol>
         </nav>
     </div>
@@ -28,21 +29,21 @@
                 </div>
             </div>
             <div class="col-lg-6 pl-lg-5">
-                <span class="section-tag">Our Story</span>
-                <h2 class="section-title">25+ Years of Steel &amp; Aluminium Excellence</h2>
-                <p class="text-muted mb-3">Founded over two decades ago, Nirman Global has grown into one of the most trusted names in steel and aluminium fabrication. We serve residential, commercial, and industrial clients with precision-engineered solutions.</p>
-                <p class="text-muted mb-4">Our team of skilled fabricators and installers brings together traditional craftsmanship and modern technology to deliver products that are built to last.</p>
+                <span class="section-tag">{% trans "Our Story" %}</span>
+                <h2 class="section-title">{% trans "25+ Years of Steel & Aluminium Excellence" %}</h2>
+                <p class="text-muted mb-3">{% trans "Founded over two decades ago, Nirman Global has grown into one of the most trusted names in steel and aluminium fabrication. We serve residential, commercial, and industrial clients with precision-engineered solutions." %}</p>
+                <p class="text-muted mb-4">{% trans "Our team of skilled fabricators and installers brings together traditional craftsmanship and modern technology to deliver products that are built to last." %}</p>
                 <div class="row">
                     <div class="col-6">
                         <div class="about-stat">
                             <h3 class="stat-num">25+</h3>
-                            <p>Years Experience</p>
+                            <p>{% trans "Years Experience" %}</p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="about-stat">
                             <h3 class="stat-num">500+</h3>
-                            <p>Projects Done</p>
+                            <p>{% trans "Projects Done" %}</p>
                         </div>
                     </div>
                 </div>
@@ -55,29 +56,29 @@
 <section class="section-pad bg-steel-light">
     <div class="container">
         <div class="text-center mb-5">
-            <span class="section-tag">What Drives Us</span>
-            <h2 class="section-title">Our Mission &amp; Values</h2>
+            <span class="section-tag">{% trans "What Drives Us" %}</span>
+            <h2 class="section-title">{% trans "Our Mission & Values" %}</h2>
         </div>
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="value-card text-center">
                     <i class="fa fa-bullseye value-icon"></i>
-                    <h5>Our Mission</h5>
-                    <p class="text-muted">To deliver precision-engineered steel and aluminium solutions that exceed client expectations in quality, durability, and design.</p>
+                    <h5>{% trans "Our Mission" %}</h5>
+                    <p class="text-muted">{% trans "To deliver precision-engineered steel and aluminium solutions that exceed client expectations in quality, durability, and design." %}</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="value-card text-center">
                     <i class="fa fa-eye value-icon"></i>
-                    <h5>Our Vision</h5>
-                    <p class="text-muted">To be the most trusted fabrication partner for residential and commercial projects across the region.</p>
+                    <h5>{% trans "Our Vision" %}</h5>
+                    <p class="text-muted">{% trans "To be the most trusted fabrication partner for residential and commercial projects across the region." %}</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="value-card text-center">
                     <i class="fa fa-handshake value-icon"></i>
-                    <h5>Our Values</h5>
-                    <p class="text-muted">Integrity, quality, innovation, and customer satisfaction are the pillars of everything we do.</p>
+                    <h5>{% trans "Our Values" %}</h5>
+                    <p class="text-muted">{% trans "Integrity, quality, innovation, and customer satisfaction are the pillars of everything we do." %}</p>
                 </div>
             </div>
         </div>
@@ -89,9 +90,9 @@
 <section class="section-pad bg-white">
     <div class="container">
         <div class="text-center mb-5">
-            <span class="section-tag">The People</span>
-            <h2 class="section-title">Meet Our Team</h2>
-            <p class="text-muted">Skilled professionals dedicated to delivering the best</p>
+            <span class="section-tag">{% trans "The People" %}</span>
+            <h2 class="section-title">{% trans "Meet Our Team" %}</h2>
+            <p class="text-muted">{% trans "Skilled professionals dedicated to delivering the best" %}</p>
         </div>
         <div class="row">
             {% for member in team_members %}
